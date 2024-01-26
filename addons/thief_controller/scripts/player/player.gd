@@ -420,6 +420,6 @@ func _drag(damping : float = 0.5, s2ms : int = 15) -> void:
 	
 	
 func _throw(throw_force : float = 10.0) -> void:
-	var d = -_camera.global_transform.basis.z.normalized()
-	drag_object.apply_central_impulse(d * throw_force)
+	var throw_direction = -_camera.global_transform.basis.z.normalized()
+	drag_object.apply_central_impulse(throw_direction * throw_force)
 	_camera.add_stress(0.2)
