@@ -301,7 +301,7 @@ func _lean() -> void:
 
 # There seems to be an issue
 # where if the plane the player is on is too thin
-# the player intersects with the floor.	
+# the player intersects with the floor.
 func _crouch() -> void:
 	crouch_rate = clamp(crouch_rate, 0.11, 1.0)
 
@@ -331,14 +331,11 @@ func _crouch() -> void:
 			_collider.shape.radius = _collider_normal_radius
 			return
 
-
 func _land():
 	if state == State.STATE_CROUCHING or _camera.stress > 0.1:
 		return
-
 	_audio_player.play_land_sound()
 	_camera.add_stress(0.1)
-
 
 func _process_frob_and_drag():
 	if (Input.is_action_just_pressed("mouse_left") 

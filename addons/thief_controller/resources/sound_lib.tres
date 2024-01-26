@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://addons/thief_controller/scripts/resources/sound_library.gd" type="Script" id=1]
+[ext_resource path="res://addons/thief_controller/resources/scripts/sound_library.gd" type="Script" id=1]
 
 [resource]
 resource_local_to_scene = true

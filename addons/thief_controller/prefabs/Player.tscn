@@ -5,10 +5,10 @@
 [ext_resource path="res://addons/thief_controller/scripts/player/player_audio.gd" type="Script" id=3]
 [ext_resource path="res://addons/thief_controller/scripts/player/player_sound_emitter.gd" type="Script" id=4]
 [ext_resource path="res://addons/thief_controller/scripts/player/player_camera.gd" type="Script" id=5]
-[ext_resource path="res://addons/thief_controller/texture/crosshair_zoom.png" type="Texture" id=6]
-[ext_resource path="res://addons/thief_controller/resources/defaults/sound_checkerboard.tres" type="Resource" id=7]
-[ext_resource path="res://addons/thief_controller/resources/defaults/settings.tres" type="Resource" id=8]
-[ext_resource path="res://addons/thief_controller/resources/defaults/player_sounds.tres" type="Resource" id=9]
+[ext_resource path="res://addons/thief_controller/texture/player_ui/crosshair_zoom.png" type="Texture" id=6]
+[ext_resource path="res://addons/thief_controller/resources/sound_checkerboard.tres" type="Resource" id=7]
+[ext_resource path="res://addons/thief_controller/resources/settings.tres" type="Resource" id=8]
+[ext_resource path="res://addons/thief_controller/resources/player_sounds.tres" type="Resource" id=9]
 
 [sub_resource type="CylinderShape" id=3]
 height = 1.5

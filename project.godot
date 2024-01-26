@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "ThiefAudioLibrary",
 "language": "GDScript",
-"path": "res://addons/thief_controller/scripts/resources/audio_player_sounds.gd"
+"path": "res://addons/thief_controller/resources/scripts/audio_player_sounds.gd"
 }, {
 "base": "RigidBody",
 "class": "ThiefCharacterController",
@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "ThiefClamberSettings",
 "language": "GDScript",
-"path": "res://addons/thief_controller/scripts/resources/clamber_settings.gd"
+"path": "res://addons/thief_controller/resources/scripts/clamber_settings.gd"
 }, {
 "base": "Spatial",
 "class": "ThiefLightDetector",
@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "ThiefSettings",
 "language": "GDScript",
-"path": "res://addons/thief_controller/scripts/resources/player_settings.gd"
+"path": "res://addons/thief_controller/resources/scripts/player_settings.gd"
 }, {
 "base": "Camera",
 "class": "ThiefShakeCamera",
@@ -62,12 +62,12 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "ThiefSoundLibrary",
 "language": "GDScript",
-"path": "res://addons/thief_controller/scripts/resources/sound_library.gd"
+"path": "res://addons/thief_controller/resources/scripts/sound_library.gd"
 }, {
 "base": "Resource",
 "class": "ThiefSoundPair",
 "language": "GDScript",
-"path": "res://addons/thief_controller/scripts/resources/sound_pair.gd"
+"path": "res://addons/thief_controller/resources/scripts/sound_pair.gd"
 } ]
 _global_script_class_icons={
 "ThiefAudioLibrary": "",
