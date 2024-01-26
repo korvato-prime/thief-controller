@@ -50,14 +50,13 @@ func _load_directory(path) -> Array:
 	dir.list_dir_begin(true)
 	
 	var array := []
-
+	
 	var snd = dir.get_next()
 	while snd != "":
 		if snd.ends_with(".wav"):
 			array.append(load(path + "/" + snd))
 		snd = dir.get_next()
 	return array
-
 
 func play_footstep_sound():
 	if _footstep_sounds.size() > 0:
@@ -70,8 +69,7 @@ func play_land_sound():
 	_landing_sounds.shuffle()
 	stream = _landing_sounds.front()
 	play()
-
-
+	
 func play_clamber_sound(clamber_in : bool) -> void:
 	if clamber_in:
 		if not stream in _clamber_sounds["in"]:

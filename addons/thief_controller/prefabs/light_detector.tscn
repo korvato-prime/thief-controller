@@ -12,7 +12,6 @@ transform = Transform( 0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, 0, 0, 0 )
 layers = 2
 cast_shadow = 0
 mesh = ExtResource( 1 )
-material/0 = null
 
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 64, 64 )

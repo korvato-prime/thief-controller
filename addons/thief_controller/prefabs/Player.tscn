@@ -1,15 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://addons/thief_controller/scripts/player/player.gd" type="Script" id=1]
-[ext_resource path="res://addons/thief_controller/prefabs/LightDetector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/thief_controller/prefabs/light_detector.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/thief_controller/scripts/player/player_audio.gd" type="Script" id=3]
 [ext_resource path="res://addons/thief_controller/scripts/player/player_sound_emitter.gd" type="Script" id=4]
 [ext_resource path="res://addons/thief_controller/scripts/player/player_camera.gd" type="Script" id=5]
 [ext_resource path="res://addons/thief_controller/texture/crosshair_zoom.png" type="Texture" id=6]
 
 [sub_resource type="CylinderShape" id=3]
-radius = 0.5
 height = 1.5
+radius = 0.5
 
 [sub_resource type="ViewportTexture" id=2]
 viewport_path = NodePath("Viewport")
@@ -52,9 +52,6 @@ script = ExtResource( 5 )
 [node name="PlayerUI" type="Control" parent="Camera/CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Crosshair" type="TextureRect" parent="Camera/CanvasLayer/PlayerUI"]
 anchor_left = 0.5
