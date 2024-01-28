@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://addons/thief_controller/scripts/player/player.gd" type="Script" id=1]
-[ext_resource path="res://addons/thief_controller/prefabs/light_detector.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/thief_controller/scripts/player/player_audio.gd" type="Script" id=3]
-[ext_resource path="res://addons/thief_controller/scripts/player/player_sound_emitter.gd" type="Script" id=4]
-[ext_resource path="res://addons/thief_controller/scripts/player/player_camera.gd" type="Script" id=5]
-[ext_resource path="res://addons/thief_controller/texture/player_ui/crosshair_zoom.png" type="Texture" id=6]
-[ext_resource path="res://addons/thief_controller/resources/sound_checkerboard.tres" type="Resource" id=7]
-[ext_resource path="res://addons/thief_controller/resources/settings.tres" type="Resource" id=8]
-[ext_resource path="res://addons/thief_controller/resources/player_sounds.tres" type="Resource" id=9]
+[ext_resource path="res://addons/thief_controller/resources/settings.tres" type="Resource" id=1]
+[ext_resource path="res://addons/thief_controller/resources/player_sounds.tres" type="Resource" id=2]
+[ext_resource path="res://addons/thief_controller/resources/sound_checkerboard.tres" type="Resource" id=3]
+[ext_resource path="res://addons/thief_controller/light_detector/light_detector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/thief_controller/texture/player_ui/crosshair_zoom.png" type="Texture" id=5]
+[ext_resource path="res://addons/thief_controller/player/scripts/player_sound_emitter.gd" type="Script" id=6]
+[ext_resource path="res://addons/thief_controller/player/scripts/player_camera.gd" type="Script" id=7]
+[ext_resource path="res://addons/thief_controller/player/scripts/player_audio.gd" type="Script" id=8]
+[ext_resource path="res://addons/thief_controller/player/scripts/player.gd" type="Script" id=9]
 
 [sub_resource type="CylinderShape" id=3]
 height = 1.5
@@ -22,10 +22,10 @@ viewport_path = NodePath("Viewport")
 [node name="Player" type="RigidBody"]
 mode = 2
 custom_integrator = true
-script = ExtResource( 1 )
-settings = ExtResource( 8 )
-texture_sound_library = ExtResource( 7 )
-audio_library = ExtResource( 9 )
+script = ExtResource( 9 )
+settings = ExtResource( 1 )
+texture_sound_library = ExtResource( 3 )
+audio_library = ExtResource( 2 )
 
 [node name="Collider" type="CollisionShape" parent="."]
 visible = false
@@ -34,7 +34,7 @@ shape = SubResource( 3 )
 [node name="SurfaceDetector" type="RayCast" parent="."]
 enabled = true
 
-[node name="LightDetector" parent="." instance=ExtResource( 2 )]
+[node name="LightDetector" parent="." instance=ExtResource( 4 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="Viewport" type="Viewport" parent="."]
@@ -51,7 +51,7 @@ cull_mask = 4
 transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 3.84615, 0, 0.5, 0 )
 cull_mask = 1048569
 current = true
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera"]
 
@@ -93,7 +93,7 @@ margin_left = -64.0
 margin_top = -64.0
 margin_right = 64.0
 margin_bottom = 64.0
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -109,10 +109,10 @@ enabled = true
 cast_to = Vector3( 0, 0, -1 )
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 8 )
 
 [node name="SoundEmitter" type="Area" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="SoundEmitter"]
 shape = SubResource( 4 )
